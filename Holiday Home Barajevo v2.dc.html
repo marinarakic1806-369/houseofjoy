@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/mnjauprrrrr-design-system-64b9d1ca-c167-4d9a-ac21-0cf0afc89c39/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/mnjauprrrrr-design-system-64b9d1ca-c167-4d9a-ac21-0cf0afc89c39/tokens/colors.css">
+<link rel="stylesheet" href="_ds/mnjauprrrrr-design-system-64b9d1ca-c167-4d9a-ac21-0cf0afc89c39/tokens/typography.css">
+<link rel="stylesheet" href="_ds/mnjauprrrrr-design-system-64b9d1ca-c167-4d9a-ac21-0cf0afc89c39/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/mnjauprrrrr-design-system-64b9d1ca-c167-4d9a-ac21-0cf0afc89c39/tokens/shape.css">
+<link rel="stylesheet" href="_ds/mnjauprrrrr-design-system-64b9d1ca-c167-4d9a-ac21-0cf0afc89c39/tokens/base.css">
+<link rel="stylesheet" href="_ds/mnjauprrrrr-design-system-64b9d1ca-c167-4d9a-ac21-0cf0afc89c39/styles.css">
+<script src="_ds/mnjauprrrrr-design-system-64b9d1ca-c167-4d9a-ac21-0cf0afc89c39/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&display=swap">
+<style>
+:root{--font-script:'Big Shoulders Display',sans-serif;--font-display:'Big Shoulders Display',sans-serif}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;background:#F4EDE2;color:#1D1A17}
+a{color:#2F7D79}
+a:hover{color:#8A6A28}
+</style>
+</helmet>
+
+<div style="font-family:var(--font-sans);background:#F4EDE2;color:#1D1A17;min-height:100vh">
+
+<header style="position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:clamp(10px,2vw,24px);padding:12px clamp(16px,4vw,56px);background:rgba(247,241,232,.82);backdrop-filter:blur(14px) saturate(1.25);-webkit-backdrop-filter:blur(14px) saturate(1.25);border-bottom:1px solid rgba(197,160,89,.35)">
+  <a href="#top" style="flex:none;display:flex;align-items:center;gap:14px;text-decoration:none;color:#1D1A17" aria-label="House of Joy Barajevo">
+    <img src="img/logo-house-of-joy.webp" alt="House of Joy Barajevo" style="width:56px;height:56px;display:block;border-radius:50%;border:1.5px solid #C5A059;box-sizing:border-box">
+  </a>
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <nav style="flex:1 1 auto;display:flex;justify-content:center;gap:clamp(14px,2vw,40px);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;white-space:nowrap">
+      <a href="#prostor" onClick="{{ goTab0 }}" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Bazen</a>
+      <a href="#prostor" onClick="{{ goTab1 }}" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Jacuzzi</a>
+      <a href="#prostor" onClick="{{ goTab2 }}" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Roštilj</a>
+      <a href="#prostor" onClick="{{ goTab3 }}" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Igralište</a>
+      <a href="#prostor" onClick="{{ goTab4 }}" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Kuća</a>
+      <a href="#proslave" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Proslave</a>
+      <a href="Cene.dc.html" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Cene</a>
+      <a href="#utisci" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Utisci</a>
+      <a href="#pitanja" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Pitanja</a>
+      <a href="#kontakt" style="color:#1D1A17;text-decoration:none" style-hover="color:#8A6A28">Kontakt</a>
+    </nav>
+  </sc-if>
+  <a href="Holiday%20Home%20Barajevo%20EN.dc.html" aria-label="Language" style="flex:none;padding:6px 12px;border-radius:999px;border:1px solid #C5A059;color:#1D1A17;text-decoration:none;font-size:12px;letter-spacing:.14em;font-weight:700">SR · <span style="color:#2F7D79">EN</span></a>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ toggleMenu }}" aria-label="Meni" style="margin-left:auto;width:44px;height:44px;border-radius:50%;border:1px solid #C5A059;background:rgba(255,255,255,.55);color:#1D1A17;font-size:20px;line-height:1;cursor:pointer">☰</button>
+  </sc-if>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav style="position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;background:rgba(247,241,232,.98);border-bottom:1px solid rgba(197,160,89,.45);box-shadow:0 16px 36px rgba(60,40,20,.12);font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:600">
+      <a href="#prostor" onClick="{{ goTab0 }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Bazen</a>
+      <a href="#prostor" onClick="{{ goTab1 }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Jacuzzi</a>
+      <a href="#prostor" onClick="{{ goTab2 }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Roštilj</a>
+      <a href="#prostor" onClick="{{ goTab3 }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Igralište</a>
+      <a href="#prostor" onClick="{{ goTab4 }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Kuća</a>
+      <a href="#proslave" onClick="{{ closeMenu }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Proslave</a>
+      <a href="Cene.dc.html" onClick="{{ closeMenu }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Cene</a>
+      <a href="#utisci" onClick="{{ closeMenu }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Utisci</a>
+      <a href="#pitanja" onClick="{{ closeMenu }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px;border-bottom:1px solid rgba(197,160,89,.3)">Pitanja</a>
+      <a href="#kontakt" onClick="{{ closeMenu }}" style="color:#1D1A17;text-decoration:none;padding:16px 24px">Kontakt</a>
+    </nav>
+  </sc-if>
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <button onClick="{{ openForm }}" style="flex:none;padding:4px 26px 6px;border-radius:999px;border:1px solid #2F7D79;background:#2F7D79;color:#FFFFFF;font-family:var(--font-script);font-weight:700;font-size:26px;line-height:1.15;cursor:pointer" style-hover="background:#24857F">Rezerviši</button>
+  </sc-if>
+</header>
+
+<sc-if value="{{ formOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeForm }}" style="position:fixed;inset:0;z-index:50;background:rgba(29,26,23,.5);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box">
+    <form onClick="{{ stop }}" onSubmit="{{ submitForm }}" style="position:relative;width:min(100%,560px);max-height:calc(100vh - 40px);overflow:auto;background:#5EACA8;padding:clamp(28px,4vw,44px);box-sizing:border-box;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 60px rgba(0,0,0,.25)">
+      <button type="button" onClick="{{ closeForm }}" aria-label="Zatvori" style="position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.3);color:#1D1A17;font-size:20px;cursor:pointer">×</button>
+      <h2 style="margin:0 0 8px;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(34px,5vw,52px);line-height:1;color:#123F3C">Rezerviši<br><span style="color:#FFFFFF">svoj dan.</span></h2>
+      <input name="ime" required placeholder="Ime i prezime" style="flex-shrink:0;height:56px;padding:0 24px;border-radius:999px;border:0;background:#FFFFFF;font:inherit;font-size:16px;color:#1D1A17">
+      <input name="telefon" type="tel" required placeholder="Telefon" style="flex-shrink:0;height:56px;padding:0 24px;border-radius:999px;border:0;background:#FFFFFF;font:inherit;font-size:16px;color:#1D1A17">
+      <select name="povod" style="flex-shrink:0;height:56px;padding:0 20px;border-radius:999px;border:0;background:#FFFFFF;font:inherit;font-size:16px;color:#1D1A17">
+        <option>Proslava</option><option>Rođendan</option><option>Team building</option><option>Radionica kuvanja</option><option>Joga</option><option>Odmor</option><option>Noćenje</option>
+      </select>
+      <input name="detalji" placeholder="Datum i broj gostiju" style="flex-shrink:0;height:56px;padding:0 24px;border-radius:999px;border:0;background:#FFFFFF;font:inherit;font-size:16px;color:#1D1A17">
+      <button type="submit" style="flex-shrink:0;height:58px;border-radius:999px;border:2px solid #FFFFFF;background:#2C9A94;color:#FFFFFF;font:inherit;font-size:17px;font-weight:700;cursor:pointer;margin-top:4px" style-hover="background:#24857F">Pošalji upit</button>
+      <div style="align-self:center;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;color:#123F3C;font-size:14px;font-weight:600"><span>ili pozovi</span><a href="tel:+381648229770" style="color:#123F3C;text-decoration:none">+381 64 822 9770</a><a href="tel:+381638193194" style="color:#123F3C;text-decoration:none">+381 63 819 3194</a></div>
+    </form>
+  </div>
+</sc-if>
+
+<sc-if value="{{ mobBar }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(244,237,226,.85);backdrop-filter:blur(14px) saturate(1.25);-webkit-backdrop-filter:blur(14px) saturate(1.25);border-top:1px solid rgba(255,255,255,.65);box-shadow:0 -8px 24px rgba(60,40,20,.12)">
+    <a href="tel:+381648229770" style="flex:1;display:flex;align-items:center;justify-content:center;height:48px;border-radius:999px;border:1px solid #C5A059;background:#FFFFFF;color:#1D1A17;text-decoration:none;font-family:var(--font-script);font-weight:700;font-size:24px">Pozovi</a>
+    <button type="button" onClick="{{ openForm }}" style="flex:1;height:48px;border-radius:999px;border:1px solid #2F7D79;background:#2F7D79;color:#FFFFFF;font-family:var(--font-script);font-weight:700;font-size:24px;cursor:pointer">Rezerviši</button>
+  </div>
+</sc-if>
+
+<section id="top" data-screen-label="Hero" style="position:relative;height:min(88vh,880px);min-height:540px;overflow:hidden;background:#123F3C">
+  <img src="img/slauf.webp" alt="House of Joy Barajevo — vino u šlaufu na bazenu" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,30,28,.15) 0%,rgba(18,30,28,.35) 40%,rgba(18,30,28,.78) 100%)"></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;padding:0 clamp(20px,5vw,80px) {{ heroPadB }};text-shadow:0 1px 12px rgba(0,0,0,.35);max-width:1440px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;gap:18px;color:#FFFFFF">
+    <div style="font-size:12px;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:#F3E9DA">Privatna vila sa bazenom · Barajevo, Beograd</div>
+    <h1 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(46px,7vw,112px);line-height:.95;max-width:1000px;text-wrap:balance">Ceo prostor.<br>Samo za tvoje društvo.</h1>
+    <p style="margin:0;max-width:560px;font-size:clamp(15px,1.4vw,18px);line-height:1.6;color:#F3E9DA;text-wrap:pretty">Bazen, jacuzzi pod pergolom, natkriveni roštilj kutak i igralište — pola sata od centra Beograda.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+      <button type="button" onClick="{{ openForm }}" style="padding:4px 30px 6px;border-radius:999px;border:1px solid #FFFFFF;background:#FFFFFF;color:#1D1A17;font-family:var(--font-script);font-weight:700;font-size:28px;line-height:1.15;cursor:pointer" style-hover="background:#F4EDE2">Rezerviši</button>
+      <a href="Cene.dc.html" style="display:inline-flex;align-items:center;padding:4px 30px 6px;border-radius:999px;border:1px solid rgba(255,255,255,.8);background:rgba(255,255,255,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#FFFFFF;text-decoration:none;font-family:var(--font-script);font-weight:700;font-size:28px;line-height:1.15" style-hover="color:#FFFFFF;background:rgba(255,255,255,.24)">Cene</a>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Ključni podaci" style="background:#FBF4EA;border-bottom:1px solid rgba(197,160,89,.4)">
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(28px,4vw,48px) clamp(20px,5vw,80px);box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(20px,3vw,32px)">
+    <p style="margin:0;font-size:clamp(16px,1.5vw,19px);line-height:1.6;max-width:880px;text-wrap:pretty"><strong style="color:#2F7D79;text-transform:uppercase;letter-spacing:.12em;font-size:.8em">Šta rezervišeš:</strong> celo imanje, isključivo za tebe i tvoje goste — kuću, bazen, jacuzzi, natkriveni deo sa roštiljem i igralište. Bez drugih gostiju.</p>
+    <div style="display:grid;grid-template-columns:repeat({{ factCols }},minmax(0,1fr));gap:1px;background:rgba(197,160,89,.45);border:1px solid rgba(197,160,89,.45)">
+      <sc-for list="{{ facts }}" as="f" hint-placeholder-count="6">
+        <div style="background:#FBF4EA;padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:clamp(30px,3vw,42px);line-height:1;color:#2F7D79;text-transform:uppercase">{{ f.v }}</span>
+          <span style="font-size:13px;line-height:1.45;color:rgba(29,26,23,.78)">{{ f.l }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="prostor" data-screen-label="Prostor" style="scroll-margin-top:80px;max-width:1440px;margin:0 auto;padding:clamp(48px,7vw,104px) clamp(20px,5vw,80px);box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px 40px;flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#8A6A28">Prostor</div>
+      <h2 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(36px,4.6vw,64px);line-height:1;color:#2F7D79;text-wrap:balance">Sve na jednom imanju</h2>
+    </div>
+  </div>
+  <div role="tablist" style="display:flex;flex-wrap:wrap;gap:10px">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
+      <button type="button" role="tab" onClick="{{ pickTab }}" data-i="{{ $index }}" style="flex:none;min-height:44px;padding:0 22px;border-radius:999px;border:1px solid #C5A059;background:{{ t.bg }};cursor:pointer;font-family:var(--font-sans);white-space:nowrap;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:{{ t.c }}" style-hover="border-color:#2F7D79">{{ t.name }}</button>
+    </sc-for>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(24px,4vw,64px);align-items:center">
+    <div style="position:relative;aspect-ratio:4/3;box-shadow:0 16px 36px rgba(0,0,0,.12);background:#EFE5D6">
+      <div ref="{{ tabRef }}" style="position:absolute;inset:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none">
+        <sc-for list="{{ cur.slides }}" as="s" hint-placeholder-count="1">
+          <div style="flex:0 0 100%;scroll-snap-align:start;position:relative;overflow:hidden"><img src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:{{ s.pos }};display:block"></div>
+        </sc-for>
+      </div>
+      <button onClick="{{ tabPrev }}" aria-label="Prethodna" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.65);background:rgba(247,241,232,.82);backdrop-filter:blur(10px);color:#1D1A17;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="border-color:#C5A059">‹</button>
+      <button onClick="{{ tabNext }}" aria-label="Sledeća" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.65);background:rgba(247,241,232,.82);backdrop-filter:blur(10px);color:#1D1A17;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="border-color:#C5A059">›</button>
+      <span style="position:absolute;left:12px;bottom:12px;padding:4px 10px;background:rgba(29,26,23,.55);color:#FFFFFF;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600">{{ cur.count }} fotografija</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#8A6A28">{{ cur.kicker }}</div>
+      <h3 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(30px,3.2vw,46px);line-height:1.02;color:#1D1A17;text-wrap:balance">{{ cur.title }}</h3>
+      <p style="margin:0;font-size:16px;line-height:1.7;color:rgba(29,26,23,.8);text-wrap:pretty">{{ cur.text }}</p>
+      <div style="display:flex;flex-direction:column;border-top:1px solid rgba(197,160,89,.5);margin-top:4px">
+        <sc-for list="{{ cur.feats }}" as="ft" hint-placeholder-count="4">
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(197,160,89,.5)"><span style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#2F7D79">{{ ft.n }}</span><span style="font-size:14px;color:rgba(29,26,23,.78);text-align:right">{{ ft.d }}</span></div>
+        </sc-for>
+      </div>
+      <button type="button" onClick="{{ openForm }}" style="align-self:flex-start;margin-top:8px;padding:4px 26px 6px;border-radius:999px;border:1px solid #C5A059;background:#FFFFFF;color:#1D1A17;font-family:var(--font-script);font-weight:700;font-size:26px;line-height:1.15;cursor:pointer" style-hover="border-color:#8A6A28;background:#FBF4EA">Rezerviši</button>
+    </div>
+  </div>
+</section>
+
+<section id="proslave" data-screen-label="Proslave" style="scroll-margin-top:80px;background:#5EACA8;color:#1D1A17">
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(48px,7vw,104px) clamp(20px,5vw,80px);box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#1D1A17">Za svaku priliku</div>
+      <h2 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(36px,4.6vw,64px);line-height:1;color:#1D1A17;text-wrap:balance;max-width:900px">Proslave, team building i porodični odmor</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px">
+      <sc-for list="{{ events }}" as="e" hint-placeholder-count="2">
+        <div style="display:flex;flex-direction:column;background:#FBF4EA;box-shadow:0 16px 36px rgba(20,60,60,.22)">
+          <div style="position:relative;aspect-ratio:4/3">
+            <div style="position:absolute;inset:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none">
+              <sc-for list="{{ e.slides }}" as="s" hint-placeholder-count="1">
+                <div style="flex:0 0 100%;scroll-snap-align:start;position:relative;overflow:hidden"><img src="{{ s }}" alt="{{ e.name }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+              </sc-for>
+            </div>
+            <button onClick="{{ cardNext }}" aria-label="Sledeća" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.65);background:rgba(247,241,232,.82);backdrop-filter:blur(10px);color:#1D1A17;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center">›</button>
+          </div>
+          <div style="padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:var(--font-display);font-weight:800;font-size:30px;text-transform:uppercase;line-height:1;color:#2F7D79">{{ e.name }}</span>
+            <span style="font-size:14px;line-height:1.6;color:rgba(29,26,23,.78)">{{ e.text }}</span>
+            <button type="button" onClick="{{ bookEvent }}" data-povod="{{ e.name }}" style="align-self:flex-start;margin-top:10px;padding:0 0 3px;border:0;border-bottom:1px solid #C5A059;background:none;color:#1D1A17;font-family:var(--font-script);font-weight:700;font-size:24px;line-height:1.15;cursor:pointer" style-hover="color:#8A6A28">Pošalji upit →</button>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ showReviews }}" hint-placeholder-val="{{ true }}">
+<section id="utisci" data-screen-label="Utisci" style="scroll-margin-top:80px;max-width:1440px;margin:0 auto;padding:clamp(48px,7vw,104px) clamp(20px,5vw,80px);box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#8A6A28">Utisci gostiju</div>
+    <h2 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(36px,4.6vw,64px);line-height:1;color:#2F7D79">Rekli su o nama</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
+    <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:18px;padding:clamp(24px,3vw,36px);background:#FBF4EA;border-top:2px solid #C5A059;box-shadow:0 16px 36px rgba(0,0,0,.06)">
+        <span style="color:#C5A059;font-size:15px;letter-spacing:.2em">★★★★★</span>
+        <blockquote style="margin:0;font-size:17px;line-height:1.6;color:#1D1A17;text-wrap:pretty">„{{ r.q }}“</blockquote>
+        <figcaption style="margin-top:auto;display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#2F7D79">{{ r.n }}</span><span style="font-size:13px;color:rgba(29,26,23,.7)">{{ r.e }}</span></figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+</sc-if>
+
+<section id="pitanja" data-screen-label="FAQ" style="scroll-margin-top:80px;background:#FBF4EA;border-top:1px solid rgba(197,160,89,.4)">
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(48px,7vw,104px) clamp(20px,5vw,80px);box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(24px,5vw,80px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#8A6A28">Česta pitanja</div>
+      <h2 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(36px,4.6vw,64px);line-height:1;color:#2F7D79">Pre nego što rezervišeš</h2>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:rgba(29,26,23,.78);max-width:380px">Nisi našao odgovor? Pozovi <a href="tel:+381648229770" style="color:#2F7D79;font-weight:600">+381 64 822 9770</a>.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;border-top:1px solid rgba(197,160,89,.55)">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="6">
+        <div style="border-bottom:1px solid rgba(197,160,89,.55)">
+          <button type="button" onClick="{{ toggleFaq }}" data-i="{{ $index }}" aria-expanded="{{ q.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;border:0;background:none;cursor:pointer;text-align:left;font-family:var(--font-sans);font-size:16px;font-weight:600;line-height:1.4;color:#1D1A17" style-hover="color:#2F7D79"><span>{{ q.q }}</span><span style="flex:none;width:32px;height:32px;border-radius:50%;border:1px solid #C5A059;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:400;color:#8A6A28">{{ q.sign }}</span></button>
+          <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;padding:0 48px 22px 0;font-size:15px;line-height:1.7;color:rgba(29,26,23,.8);text-wrap:pretty">{{ q.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" data-screen-label="Kontakt" style="scroll-margin-top:80px;background:#5EACA8;color:#1D1A17">
+  <div style="padding:clamp(40px,5vw,72px) clamp(20px,5vw,80px);max-width:1440px;margin:0 auto;box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,72px);align-items:stretch">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600">Rezervacije</div>
+      <h2 style="margin:0;font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(38px,4.8vw,66px);line-height:1">Rezerviši<br>svoj termin</h2>
+      <p style="margin:0;font-size:16px;line-height:1.7;color:rgba(29,26,23,.85);max-width:520px;text-wrap:pretty">Pozovi ili pošalji poruku — dogovaramo termin, broj gostiju i sve što ti treba za proslavu ili odmor.</p>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <a href="tel:+381648229770" style="color:#1D1A17;font-size:20px;font-weight:700;letter-spacing:.06em;text-decoration:none" style-hover="color:#123F3C">+381 64 822 9770</a>
+        <a href="tel:+381638193194" style="color:#1D1A17;font-size:20px;font-weight:700;letter-spacing:.06em;text-decoration:none" style-hover="color:#123F3C">+381 63 819 3194</a>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="viber://chat?number=%2B381648229770" style="padding:4px 24px 6px;border-radius:999px;border:1px solid #1D1A17;color:#1D1A17;text-decoration:none;font-family:var(--font-script);font-weight:700;font-size:24px" style-hover="background:#FFFFFF;color:#1D1A17">Viber</a>
+        <a href="https://wa.me/381648229770" style="padding:4px 24px 6px;border-radius:999px;border:1px solid #1D1A17;color:#1D1A17;text-decoration:none;font-family:var(--font-script);font-weight:700;font-size:24px" style-hover="background:#FFFFFF;color:#1D1A17">WhatsApp</a>
+        <a href="https://www.instagram.com/houseofjoy_barajevo" target="_blank" style="padding:4px 24px 6px;border-radius:999px;border:1px solid #1D1A17;color:#1D1A17;text-decoration:none;font-family:var(--font-script);font-weight:700;font-size:24px" style-hover="background:#FFFFFF;color:#1D1A17">Instagram</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;margin-top:auto">
+        <span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600">Adresa</span>
+        <span style="font-size:15px;line-height:1.6">Dragomira Milovanovića Mirka 29, Barajevo, Beograd · parking preko puta, samo za goste</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div style="aspect-ratio:4/3;width:100%;position:relative;overflow:hidden;background:#F4EDE2;border:1px solid #C5A059;box-sizing:border-box"><iframe src="https://maps.google.com/maps?q=House%20of%20Joy%2C%20Dragomira%20Milovanovi%C4%87a%20Mirka%2029%2C%20Barajevo&amp;z=16&amp;output=embed" title="Lokacija House of Joy Barajevo" loading="lazy" style="width:100%;height:100%;border:0;display:block;filter:grayscale(1) sepia(.28) brightness(1.06) contrast(.92)"></iframe></div>
+      <a href="https://maps.app.goo.gl/X7da9xnYdwRooMMe8" target="_blank" style="align-self:flex-end;color:#1D1A17;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;text-underline-offset:4px" style-hover="color:#123F3C">Otvori u mapama →</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#1B1815;color:#CFC6B8;padding:22px clamp(20px,5vw,80px);display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-size:12px;line-height:1.6;letter-spacing:.1em;text-transform:uppercase">
+  <span>© 2026 House of Joy Barajevo</span>
+  <span style="color:#C5A059">30 min od centra Beograda</span>
+</footer>
+<sc-if value="{{ mobBar }}" hint-placeholder-val="{{ false }}"><div style="height:calc(68px + env(safe-area-inset-bottom));background:#1B1815"></div></sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showReviews&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sekcije&quot;}}">
+class Component extends DCLogic {
+  tabRef = React.createRef();
+  state = { formOpen: false, tab: 0, faq: 0 };
+  go(d, el) { if (!el) return; const w = el.clientWidth; let x = el.scrollLeft + d * w; if (x > el.scrollWidth - w + 2) x = 0; if (x < -2) x = el.scrollWidth - w; el.scrollTo({ left: x, behavior: 'smooth' }); }
+  book(p) { this.setState({ formOpen: true, menuOpen: false }, () => setTimeout(() => { const s = document.querySelector('select[name=povod]'); if (!s || !p) return; const k = String(p).toLowerCase().slice(0, 5); const o = [...s.options].find(o => o.text.toLowerCase().startsWith(k)); if (o) s.value = o.value; }, 30)); }
+  goTab(i) { this.setState({ tab: i, menuOpen: false }, () => { const el = this.tabRef.current; if (el) el.scrollLeft = 0; }); }
+  componentDidMount() { this._onR = () => { const w = window.innerWidth, m = w < 1080; if (m !== this.state.isMobile) this.setState({ isMobile: m, menuOpen: false }); if (w !== this.state.w) this.setState({ w }); }; window.addEventListener('resize', this._onR); this._onR(); }
+  componentWillUnmount() { window.removeEventListener('resize', this._onR); }
+  renderVals() {
+    const mob = !!this.state.isMobile;
+    const S = (src, alt, pos) => ({ src: 'img/' + src, alt, pos: pos || 'center' });
+    const T = [
+      { name: 'Bazen', kicker: 'Bazen sa slanom vodom', title: 'Lux ležaljke i pogled na zelenilo', text: 'Tirkizna slana voda, deck oko bazena i ležaljke sa dušecima za sunčanje od jutra do zalaska. U produžetku je travnjak za jogu, retreate i vežbe.',
+        slides: [S('bazen2.webp', 'Bazen sa lux ležaljkama', 'center bottom'), S('bazen-a.webp', 'Bazen'), S('foto-20261028-101839-a.webp', 'Bazen, ležaljke i ruže', 'center 60%'), S('spoljni-tus-kod-bazena.webp', 'Spoljni tuš kod bazena', 'center 30%')],
+        feats: [{ n: 'Ležaljke', d: 'sa dušecima' }, { n: 'Deck', d: 'obloga sa izgledom drveta' }, { n: 'Travnjak', d: 'joga i vežbe' }, { n: 'Tuš', d: 'spoljni, uz bazen' }] },
+      { name: 'Jacuzzi', kicker: 'Terasa iznad bazena', title: 'Jacuzzi pod pergolom i lounge', text: 'Topli jacuzzi zaštićen od sunca, lounge garniture i dve ljuljajuće sedeljke — najlepše mesto za večernje druženje sa pogledom na vodu.',
+        slides: [S('jacuzzi-1.webp', 'Jacuzzi pod pergolom'), S('jacuzzi-i-deca-rodj.webp', 'Jacuzzi i lounge'), S('jakuzzi-14-rodj.webp', 'Jacuzzi'), S('mcka.webp', 'Jacuzzi sa pogledom na bazen', 'center 4%'), S('jacuzzi-5.webp', 'Jacuzzi uz čašu')],
+        feats: [{ n: 'Jacuzzi', d: 'natkriven pergolom' }, { n: 'Lounge', d: 'luksuzne garniture' }, { n: 'Ljuljaške', d: 'drvena i pletena' }] },
+      { name: 'Roštilj · natkriveni deo', kicker: 'Roštilj i veliki sto', title: 'Kiša ili sunce, proslava ide dalje', text: 'Dugačak sto za celo društvo, topla svetlost bambus lustera, frižider vitrina sa hladnim pićem, barski stolovi i roštilj na dohvat ruke.',
+        slides: [S('natkriveni-deo-za-rostilj.webp', 'Natkriveni deo sa velikim stolom'), S('radionica-sa-dobrom-rezolucijom.webp', 'Radionica kuvanja'), S('natkriveni-deo-zene-247ed5fe.webp', 'Druženje za stolom'), S('grejalica-spoljna-1ed35480.webp', 'Spoljna grejalica'), S('noc-50606101.webp', 'Večernja žurka')],
+        feats: [{ n: 'Veliki sto', d: 'za celo društvo' }, { n: 'Roštilj', d: 'uz sto i bazen' }, { n: 'Frižider vitrina', d: 'hladna pića' }, { n: 'Grejalica', d: 'za hladnije večeri' }] },
+      { name: 'Igralište', kicker: 'Za male goste', title: 'Dečije igralište u zelenilu', text: 'Drvena kućica sa zidom za penjanje, tobogani, ljuljaške i trambolina. Pored je klupica za roditelje — kafa dok deca uživaju.',
+        slides: [S('igraliste4-crop.webp', 'Igralište'), S('igraliste1.webp', 'Igralište'), S('igraliste.webp', 'Igralište'), S('igraonica-beba.webp', 'Igralište za bebe')],
+        feats: [{ n: 'Kućica', d: 'sa zidom za penjanje' }, { n: 'Tobogani', d: 'i ljuljaške' }, { n: 'Trambolina', d: 'preko puta igrališta' }] },
+      { name: 'Kuća', kicker: 'Unutrašnjost', title: 'Kuća i letnja kuhinja', text: 'Prvi sprat: kuhinja, kupatilo, spavaća i dnevna soba i dve terase — jedna na igralište, druga, ogromna, na bazen. Dole je letnja kuhinja sa kupatilom.',
+        slides: [S('dnevna-u-kuci-96e2b289.webp', 'Dnevna soba'), S('kuhinja-donja-letnja-df950c0c.webp', 'Letnja kuhinja'), S('pogled-na-bazen-iz-letnje-kuhinje.webp', 'Pogled na bazen'), S('donje-kupatilo-a8e96a62.webp', 'Kupatilo'), S('foto-20261027-102021-3.webp', 'Tirkizna komoda')],
+        feats: [{ n: 'Letnja kuhinja', d: 'espreso, šporet, ledomat' }, { n: 'Spavaća soba', d: 'za noćenje' }, { n: 'Kupatila', d: 'dva' }, { n: 'Terase', d: 'dve, jedna na bazen' }] }
+    ];
+    const ti = this.state.tab;
+    const cur = { ...T[ti], count: T[ti].slides.length };
+    const faqsRaw = [
+      { q: 'Šta tačno rezervišem?', a: 'Celo imanje samo za tvoje društvo: kuću, bazen, jacuzzi, natkriveni deo sa roštiljem, igralište i parking. Za vreme tvog termina nema drugih gostiju.' },
+      { q: 'Koliko gostiju može da dođe?', a: 'Na dnevnom najmu do 40 osoba. Cena zavisi od broja gostiju (do 10, 20, 30 ili 40) i dana u nedelji.' },
+      { q: 'Kada je dolazak i odlazak?', a: 'Dnevni najam traje od 13 do 22h. Najam sa noćenjem traje od 14h do 11h narednog dana.' },
+      { q: 'Smemo li da donesemo hranu, piće i muziku?', a: 'Da. Roštilj, letnja kuhinja i frižider vitrina su na raspolaganju. Konobara, ketering, dekoraciju i DJ-a možemo da organizujemo na upit.' },
+      { q: 'Šta ako pada kiša?', a: 'Natkriveni deo sa velikim stolom, bambus lusterima i grejalicom prima celo društvo, a jacuzzi je pod pergolom.' },
+      { q: 'Ima li parkinga?', a: 'Da, parking je preko puta kuće, samo za goste.' },
+      { q: 'Kako se rezerviše?', a: 'Pozovi ili pošalji upit preko forme ili WhatsApp-a sa datumom i brojem gostiju — javljamo se sa potvrdom termina.' }
+    ];
+    const faqs = faqsRaw.map((f, i) => ({ ...f, open: i === this.state.faq, sign: i === this.state.faq ? '−' : '+' }));
+    return {
+      factCols: this.state.w < 640 ? 2 : this.state.w < 1180 ? 3 : 6,
+      heroPadB: mob ? '100px' : 'clamp(32px,6vw,80px)',
+      isMobile: mob, isDesktop: !mob, menuOpen: mob && !!this.state.menuOpen,
+      mobBar: mob && !this.state.formOpen && !this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })), closeMenu: () => this.setState({ menuOpen: false }),
+      formOpen: this.state.formOpen, openForm: () => this.setState({ formOpen: true, menuOpen: false }), closeForm: () => this.setState({ formOpen: false }), stop: (e) => e.stopPropagation(),
+      submitForm: (e) => { e.preventDefault(); const f = e.currentTarget.elements; const msg = "Zdravo! Upit za House of Joy:\nIme: " + f.ime.value + "\nTelefon: " + f.telefon.value + "\nPovod: " + f.povod.value + "\nDatum i broj gostiju: " + f.detalji.value; window.open("https://wa.me/381648229770?text=" + encodeURIComponent(msg), "_blank"); this.setState({ formOpen: false }); },
+      bookEvent: (ev) => this.book(ev.currentTarget.dataset.povod),
+      cardNext: (ev) => this.go(1, ev.currentTarget.parentElement.firstElementChild),
+      facts: [
+        { v: 'Do 40', l: 'gostiju na dnevnom najmu' },
+        { v: 'Noćenje', l: 'spavaća soba, 14h – 11h' },
+        { v: '13–22h', l: 'dnevni najam' },
+        { v: 'Privatno', l: 'celo imanje samo za vas' },
+        { v: '30 min', l: 'od centra Beograda' },
+        { v: 'Od 150€', l: 'po danu · sve cene' }
+      ],
+      tabs: T.map((t, i) => ({ name: t.name, c: i === ti ? '#FFFFFF' : '#1D1A17', bg: i === ti ? '#2F7D79' : '#FFFFFF' })),
+      pickTab: (ev) => { const i = +ev.currentTarget.dataset.i; this.setState({ tab: i }, () => { const el = this.tabRef.current; if (el) el.scrollLeft = 0; }); },
+      cur, tabRef: this.tabRef,
+      goTab0: () => this.goTab(0), goTab1: () => this.goTab(1), goTab2: () => this.goTab(2), goTab3: () => this.goTab(3), goTab4: () => this.goTab(4),
+      tabPrev: () => this.go(-1, this.tabRef.current), tabNext: () => this.go(1, this.tabRef.current),
+      events: [
+        { name: 'Proslave', text: 'Rođendani, punoletstva, godišnjice, devojačke i momačke večeri.', slides: ['img/coctail.webp', 'img/slavljenica-crop.webp', 'img/dekorrr-a73cff3f.webp', 'img/torta-a1d294a1.webp', 'img/boh-2b303eaf.webp', 'img/druzenje-crop.webp'] },
+        { name: 'Team building', text: 'Dan van kancelarije uz bazen, roštilj i druženje cele ekipe.', slides: ['img/tim-building1-31fca909.webp', 'img/timbuilding-b838fc9f.webp', 'img/team-bilding-9a62dba7.webp', 'img/dj-tteam-building-cf939334.webp'] },
+        { name: 'Odmor', text: 'Porodični dan ili noćenje uz bazen, jacuzzi i igralište za decu.', slides: ['img/kuca-1.webp', 'img/joga1.webp', 'img/sunce.webp'] }
+      ],
+      showReviews: this.props.showReviews ?? true,
+      reviews: [
+        { q: 'Proslavili smo ćerkin rođendan — deca nisu izlazila iz bazena, a mi smo uživali u jacuzziju. Sve besprekorno čisto.', n: 'Jelena M.', e: 'Dečiji rođendan' },
+        { q: 'Idealno za team building. Veliki sto, roštilj i bazen — ekipa i dalje priča o tom danu.', n: 'Marko P.', e: 'Team building, 25 osoba' },
+        { q: 'Kao da smo na moru, a pola sata smo od grada. Domaćini ljubazni, prostor još lepši nego na slikama.', n: 'Ana i Nikola', e: 'Vikend sa noćenjem' }
+      ],
+      faqs, toggleFaq: (ev) => { const i = +ev.currentTarget.dataset.i; this.setState(s => ({ faq: s.faq === i ? -1 : i })); }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>body{margin:0;background:#EDEDEA;font-family:system-ui,sans-serif}a{color:#8A6A28}a:hover{color:#1D1A17}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:32px;padding:40px 24px;box-sizing:border-box">
+  <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+      <button type="button" onClick="{{ pick }}" data-i="{{ $index }}" style="height:44px;padding:0 22px;border:1px solid #1D1A17;background:{{ t.bg }};color:{{ t.fg }};font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;cursor:pointer">{{ t.label }}</button>
+    </sc-for>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:56px;justify-content:center;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+      <div style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#8A6A28">Srpski</div>
+      <div style="width:390px;height:844px;padding:12px;border-radius:56px;background:#1D1A17;box-shadow:0 30px 60px rgba(0,0,0,.25);box-sizing:content-box">
+        <iframe src="{{ srSrc }}" title="Telefon SR" style="width:100%;height:100%;border:0;border-radius:44px;background:#FFFFFF;display:block"></iframe>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+      <div style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#8A6A28">English</div>
+      <div style="width:390px;height:844px;padding:12px;border-radius:56px;background:#1D1A17;box-shadow:0 30px 60px rgba(0,0,0,.25);box-sizing:content-box">
+        <iframe src="{{ enSrc }}" title="Phone EN" style="width:100%;height:100%;border:0;border-radius:44px;background:#FFFFFF;display:block"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { i: 0 };
+  pages = [
+    { label: 'Početna v2', sr: 'Holiday%20Home%20Barajevo%20Lux%20v2.dc.html', en: 'Holiday%20Home%20Barajevo%20Lux%20EN.dc.html' },
+    { label: 'Početna', sr: 'Holiday%20Home%20Barajevo%20Lux.dc.html', en: 'Holiday%20Home%20Barajevo%20Lux%20EN.dc.html' },
+    { label: 'Prostor', sr: 'Prostor%20Lux.dc.html', en: 'Prostor%20Lux%20EN.dc.html' },
+    { label: 'Proslave', sr: 'Proslave%20Lux.dc.html', en: 'Proslave%20Lux%20EN.dc.html' },
+    { label: 'Cene', sr: 'Cene%20Lux.dc.html', en: 'Cene%20Lux%20EN.dc.html' }
+  ];
+  renderVals() {
+    const p = this.pages[this.state.i];
+    return {
+      tabs: this.pages.map((t, i) => ({ label: t.label, bg: i === this.state.i ? '#1D1A17' : 'transparent', fg: i === this.state.i ? '#FFFFFF' : '#1D1A17' })),
+      pick: (e) => this.setState({ i: +e.currentTarget.dataset.i }),
+      srSrc: p.sr, enSrc: p.en
+    };
+  }
+}
+</script>
+</body>
+</html>

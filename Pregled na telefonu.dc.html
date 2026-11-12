@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>body{margin:0;background:#EFE5D6}a{color:#2F7D79}a:hover{color:#8A6A28}</style></helmet>
+<div style="min-height:100vh;display:flex;gap:48px;flex-wrap:wrap;justify-content:center;align-items:center;padding:32px;font-family:Inter,sans-serif">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+    <div style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#8A6A28">Desktop</div>
+    <div style="width:720px;height:540px;overflow:hidden;border-radius:12px;background:#1D1A17;padding:10px 10px 10px;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+      <iframe src="netlify/index.html" title="Desktop" style="width:1400px;height:1040px;border:0;transform:scale(.5);transform-origin:0 0;background:#F4EDE2;display:block"></iframe>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+    <div style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#8A6A28">Srpski</div>
+    <div style="width:390px;height:844px;padding:12px;border-radius:56px;background:#1D1A17;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+      <iframe src="netlify/index.html" title="Telefon SR" style="width:100%;height:100%;border:0;border-radius:44px;background:#F4EDE2;display:block"></iframe>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+    <div style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#8A6A28">English</div>
+    <div style="width:390px;height:844px;padding:12px;border-radius:56px;background:#1D1A17;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+      <iframe src="netlify/en.html" title="Phone EN" style="width:100%;height:100%;border:0;border-radius:44px;background:#F4EDE2;display:block"></iframe>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
