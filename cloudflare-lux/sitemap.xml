@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://houseofjoy.pages.dev/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://houseofjoy.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofjoy.pages.dev/en"/>
+  </url>
+  <url>
+    <loc>https://houseofjoy.pages.dev/en</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://houseofjoy.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofjoy.pages.dev/en"/>
+  </url>
+  <url>
+    <loc>https://houseofjoy.pages.dev/prostor</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://houseofjoy.pages.dev/prostor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofjoy.pages.dev/prostor-en"/>
+  </url>
+  <url>
+    <loc>https://houseofjoy.pages.dev/prostor-en</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://houseofjoy.pages.dev/prostor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofjoy.pages.dev/prostor-en"/>
+  </url>
+  <url>
+    <loc>https://houseofjoy.pages.dev/proslave</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://houseofjoy.pages.dev/proslave"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofjoy.pages.dev/proslave-en"/>
+  </url>
+  <url>
+    <loc>https://houseofjoy.pages.dev/proslave-en</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://houseofjoy.pages.dev/proslave"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofjoy.pages.dev/proslave-en"/>
+  </url>
+  <url>
+    <loc>https://houseofjoy.pages.dev/cene</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://houseofjoy.pages.dev/cene"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofjoy.pages.dev/cene-en"/>
+  </url>
+  <url>
+    <loc>https://houseofjoy.pages.dev/cene-en</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://houseofjoy.pages.dev/cene"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://houseofjoy.pages.dev/cene-en"/>
+  </url>
+</urlset>
